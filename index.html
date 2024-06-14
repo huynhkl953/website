@@ -1,16 +1,25 @@
 <!DOCTYPE HTML>
-  <html lang="en">
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      
-      <title>Khoa Le Anh Huynh</title>
-      
-      <meta name="author" content="Khoa Le Anh Huynh">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-            <link rel="stylesheet" type="text/css" href="stylesheet.css">
-              
-              </head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Khoa Le Anh Huynh</title>
+<meta name="author" content="Khoa Le Anh Huynh">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script>
+function filterPapers(category) {
+  var papers = document.querySelectorAll('.research-paper');
+  papers.forEach(paper => {
+    if (paper.classList.contains(category) || category === 'all') {
+      paper.style.display = 'table-row'; // or 'block' depending on your layout
+    } else {
+      paper.style.display = 'none';
+    }
+  });
+}
+window.onload = () => filterPapers('all'); // Display all papers by default on page load
+</script>
+</head>
               
               <body>
               <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -48,214 +57,506 @@
                 <h2>Research</h2>
                 <p>
                   My professional interests primarily revolve around clustering, machine learning, optimization, and regression analysis. A significant portion of my research is dedicated to the development of specialized, automated tools for the preprocessing and analysis of complex, highly-multiplexed, and multimodal imaging data, particularly in single-cell studies. This includes work with advanced systems like PhenoCycler, MERSCOPE, and Xenium. In addition, I have been actively involved in harnessing the synergistic potential of methylation and fragmentomic signatures from blood-based circulating tumor DNA. By integrating these with multimodal deep-learning analyses, my work contributes to advancing early cancer detection methodologies.</p>
-                  </p>Please feel free to connect if you are interested in spatial omics and early cancer detection, or would like to discuss my current and previous studies.
-                </p>
-               </p> Below are the recent projects:</p>
-                
+                  </p>Please feel free to connect if you are interested in spatial omics and early cancer detection, or would like to discuss my current and previous studies.</p>
+               </p> Below are my publications:</p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          <!-- Navigation buttons for paper categories -->
+<div style="text-align:center; margin-bottom: 20px;">
+  <button onclick="filterPapers('all')">All Papers</button>
+  <button onclick="filterPapers('category1')">Spatial Multiomics</button>
+  <button onclick="filterPapers('category2')">Early Cancer Dection</button>
+  <button onclick="filterPapers('category3')">Public health</button>
+</div>
 
-            <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='portrait_image'><img src='images/test_figure1.svg'></div>
-                  <img src='images/test_figure1.svg'>
-                </div>
-                <script type="text/javascript">
-                  function portrait_start() {
-                    document.getElementById('portrait_image').style.opacity = "1";
-                  }
 
-                  function portrait_stop() {
-                    document.getElementById('portrait_image').style.opacity = "0";
-                  }
-                  portrait_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.biorxiv.org/content/10.1101/2023.08.23.554343v1.abstract">
-                  <span class="papertitle">Single-Cell and Spatially Resolved Interactomics of Tooth-Associated Keratinocytes in Periodontitis</span>
-                </a>
-                <br>
-                </a> Quinn T. Easter, Bruno Fernandes Matuck, German Beldorati Stark, Catherine L. Worth,   Alexander V. Predeus, Brayon Fremin,<strong> Khoa Huynh</strong>, Vaishnavi Ranganathan, Diana Pereira, Theresa Weaver, Kathryn Miller, Paola Perez, Akira Hasuike, Zhaoxu Chen, Mandy Bush, Blake M. Warner, Janice Lee, Shannon M. Wallet, Ines Sequeira, Katarzyna M. Tyc, Jinze Liu, Kang I. Ko, Sarah A. Teichmann, Kevin M. Byrd.
-                <p></p>
-                <em>Accepted Nature Communication</em>
-                <br>
-                <a href="https://www.biorxiv.org/content/10.1101/2023.08.23.554343v1.abstract">arxiv</a>
-                <p></p>
-              </td>
-            </tr>
-            
-            
-            
-            
-            
-            <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='portrait_image'><img src='images/image2.svg'></div>
-                  <img src='images/image2.svg'>
-                </div>
-                <script type="text/javascript">
-                  function portrait_start() {
-                    document.getElementById('portrait_image').style.opacity = "1";
-                  }
-
-                  function portrait_stop() {
-                    document.getElementById('portrait_image').style.opacity = "0";
-                  }
-                  portrait_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.researchsquare.com/article/rs-3601404/v1">
-                  <span class="papertitle">GZMK+CD8+ T cells Target a Specific Acinar Cell Type in Sjögren’s Disease</span>
-                </a>
-                <br>
-                </a> Thomas J.F. Pranzatelli, Paola Perez, Anson Ku, Bruno Matuck, <strong> Khoa Huynh</strong>, Shunsuke Sakai, Mehdi Abed, Shyh-Ing Jang, Eiko Yamada, Kalie Dominick, Zara Ahmed, Amanda Oliver, Alex Tsoi, Rachael Wasikowski, Quinn T. Easter, Alan N. Baer, Eileen Pelayo, Zohreh Khavandgar, David E. Kleiner, M. Teresa Magone, Sarthak Gupta, Christopher Lessard, A. Darise Farris, Dani Martin, Changyu Zheng,
-Jose Maldonado-Ortiz, Xufeng Qu, Sarah Teichmann, Daniel Barber, Alex Lam C. Tsoi, Adam Sowalsky,
-Katarzyna M. Tyc, Jinze Liu, Johann E. Gudjonnson, Kevin M. Byrd, Philip L.F. Johnson, John
-A. Chiorini, Blake M. Warner.
-                <p></p>
-                <em>under-revised Nature Journal</em>
-                <br>
-                <a href="https://www.researchsquare.com/article/rs-3601404/v1">arxiv</a> |
-                <a href="https://github.com/huynhkl953/Sjogren_paper">code</a> 
-                <p></p>
-              </td>
-            </tr>
-            
-            
-            
-            <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='portrait_image'><img src='images/image3.svg'></div>
-                  <img src='images/image3.svg'>
-                </div>
-                <script type="text/javascript">
-                  function portrait_start() {
-                    document.getElementById('portrait_image').style.opacity = "1";
-                  }
-
-                  function portrait_stop() {
-                    document.getElementById('portrait_image').style.opacity = "0";
-                  }
-                  portrait_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://elifesciences.org/reviewed-preprints/89083v1">
-                  <span class="papertitle">Multimodal analysis of methylomics and fragmentomics in plasma cell-free DNA for multi-cancer early detection and localization</span>
-                </a>
-                <br>
-                </a> Van Thien Chi Nguyen, Trong Hieu Nguyen, Nhu Nhat Tan Doan, Thi Mong Quynh Pham, Giang Thi Huong Nguyen, Thanh Dat Nguyen, Thuy Thi Thu Tran, Duy Long Vo, Thanh Hai Phan, Thanh Xuan Jasmine, Van Chu Nguyen, Huu Thinh Nguyen, Trieu Vu Nguyen, Thi Hue Hanh Nguyen, <strong> Le Anh Khoa Huynh </strong>, Trung Hieu Tran, Quang Thong Dang, Thuy Nguyen Doan, Anh Minh Tran, Viet Hai Nguyen, Vu Tuan Anh Nguyen, Le Minh Quoc Ho, Quang Dat Tran, Thi Thu Thuy Pham, Tan Dat Ho, Bao Toan Nguyen, Thanh Nhan Vo Nguyen, Thanh Dang Nguyen, Dung Thai Bieu Phu, Boi Hoan Huu Phan, Thi Loan Vo, Thi Huong Thoang Nai, Thuy Trang Tran, My Hoang Truong, Ngan Chau Tran, Trung Kien Le, Thanh Huong Thi Tran, Minh Long Duong, Hoai Phuong Thi Bach, Van Vu Kim, The Anh Pham, Duc Huy Tran, Trinh Ngoc An Le, Truong Vinh Ngoc Pham, Minh Triet Le, Dac Ho Vo, Thi Minh Thu Tran, Minh Nguyen Nguyen, Thi Tuong Vi Van, Anh Nhu Nguyen, Thi Trang Tran, Vu Uyen Tran, Minh Phong Le, Thi Thanh Do, Thi Van Phan, Luu Hong Dang Nguyen, Duy Sinh Nguyen, Van Thinh Cao, Thanh Thuy Thi Do, Dinh Kiet Truong, Hung Sang Tang, Hoa Giang, Hoai Nghia Nguyen, Minh Duy Phan, Le Son Tran. 
-                <p></p>
-                <em>eLife (impact factor: 8.7 | updated in 2023)</em>
-                <br>
-                <a href="https://elifesciences.org/reviewed-preprints/89083v1">paper</a>
-                <p></p>
-              </td>
-            </tr>
-            
-            
-            
-            
-            <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='portrait_image'><img src='images/image4.svg'></div>
-                  <img src='images/image4.svg'>
-                </div>
-                <script type="text/javascript">
-                  function portrait_start() {
-                    document.getElementById('portrait_image').style.opacity = "1";
-                  }
-
-                  function portrait_stop() {
-                    document.getElementById('portrait_image').style.opacity = "0";
-                  }
-                  portrait_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.futuremedicine.com/doi/10.2217/fon-2022-1041?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">
-                  <span class="papertitle">Multimodal analysis of ctDNA methylation and fragmentomic profiles enhances detection of nonmetastatic colorectal cancer</span>
-                </a>
-                <br>
-                </a> Huu Thinh Nguyen*, <strong>Le Anh Khoa Huynh* </strong>, Trieu Vu Nguyen, Duc Huy Tran, Thuy Thi Thu Tran, Nguyen Duy Khang Le, Ngoc-An Trinh Le, Truong-Vinh Ngoc Pham, Minh-Triet Le, Thi Mong Quynh Pham, Trong Hieu Nguyen, Thien Chi Van Nguyen, Thanh Dat Nguyen, Bui Que Tran Nguyen, Minh-Duy Phan, Hoa Giang, Le Son Tran. 
-                <p></p>
-                <em>Future Oncology (impact factor: 3.3 | updated in 2023)</em>
-                <br>
-                <a href="https://www.futuremedicine.com/doi/10.2217/fon-2022-1041?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">paper</a>
-                <p></p>
-              </td>
-            </tr>
-
-            
-            
-            
-            <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='portrait_image'><img src='images/image5.svg'></div>
-                  <img src='images/image5.svg'>
-                </div>
-                <script type="text/javascript">
-                  function portrait_start() {
-                    document.getElementById('portrait_image').style.opacity = "1";
-                  }
-
-                  function portrait_stop() {
-                    document.getElementById('portrait_image').style.opacity = "0";
-                  }
-                  portrait_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2023.1127086/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Oncology&id=1127086">
-                  <span class="papertitle">Multimodal analysis of genome-wide methylation, copy number aberrations, and end motif signatures enhances detection of early-stage breast cancer</span>
-                </a>
-                <br>
-                </a> Thi Mong Quynh Pham, Thanh Hai Phan, Thanh Xuan Jasmine, Thuy Thi Thu Tran, <strong>Le Anh Khoa Huynh</strong>, Thi Loan Vo, Thi Huong Thoang Nai, Thuy Trang Tran, My Hoang Truong, Ngan Chau Tran, Van Thien Chi Nguyen, Trong Hieu Nguyen, Thi Hue Hanh Nguyen, Nguyen Duy Khang Le, Thanh Dat Nguyen, Duy Sinh Nguyen, Dinh Kiet Truong, Thi Thanh Thuy Do, Minh-Duy Phan, Hoa Giang, Hoai-Nghia Nguyen, Le Son Tran. 
-                <p></p>
-                <em>Frontier in Oncology (impact factor: 4.7 | updated in 2023)</em>
-                <br>
-                <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2023.1127086/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Oncology&id=1127086">paper</a>
-                <p></p>
-              </td>
-            </tr>
-            
-            
-            
-            
-      
-        </td>
-      </tr>
-    </table>
-    
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Awards and Recognitions</h2>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category1" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.biorxiv.org/content/10.1101/2023.08.23.554343v1.abstract">
+        <span class="papertitle">Single-Cell and Spatially Resolved Interactomics of Tooth-Associated Keratinocytes in Periodontitis</span>
+    </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
             <ul>
-              <li>Jacob B. and Veronica Schmitt Scholarship - 2017, 2018, 2019</li>
-              <li>Harry S. Kieval Mathematics - 2017, 2018, 2019</li>
-              <li>Undergraduate Research Award - 2018, 2020</li>
-              <!-- Add more list items as needed -->
+              <li>Integrated Periodontal Meta-Atlas: We created the first integrated periodontal meta-atlas by integrating four single-cell RNA sequencing (scRNAseq) datasets using the new open-source software Cellenics, including a public database link (cellxgene). This atlas includes harmonized annotation of 32 unique cell types, featuring previously undiscovered populations of oral epithelial cells.
+</li>
+              <li>Spatial Segregation in Immune Responses: Our findings reveal spatial segregation between innate and adaptive immune responses in periodontitis. The tissue closest to the tooth, which supports facultative anaerobes, shows significant upregulation of immune checkpoint molecules such as PD-L1.</li>
+              <li>Differential Gene Expression and Cellular Activity: Approximately two-thirds of differentially expressed genes in periodontitis originate from keratinocytes, fibroblasts, and vascular endothelial cells. Keratinocytes near the tooth exhibit high activity in receptor-ligand interactions, even in healthy conditions.</li>
+              <li>Discovery of Intracellular Polybacterial Associations: We discovered intracellular polybacterial associations (PIC) in human tissues for the first time, particularly in keratinocytes. This includes a novel finding of an epithelial stem cell containing at least four intracellular microbes, a previously unknown phenomenon in human cells.</li>
+  </ul>
             </ul>
-          </td>
-        </tr>
-    
-    
-  <tr>
-    <td style="padding:10px;width:100%;vertical-align:top;text-align:right;">
-        <div style="margin-top: 10px;">
-            <p>Special thanks to <a href="https://jonbarron.info">Jon Barron</a> for providing the HTML code that enhanced this page.</p>
-        </div>
+          </li>
+
+      </ul>
+      <em>Accepted: Nature Communication</em>
+      <br>
+      <a href="https://www.biorxiv.org/content/10.1101/2023.08.23.554343v1.abstract">arxiv</a>
+      <p></p>
     </td>
   </tr>
+</tbody>
+</table>
+
+            
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category1" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.biorxiv.org/content/10.1101/2024.05.31.596861.abstract">
+        <span class="papertitle">Spatial Deconvolution of Cell Types and Cell States at Scale Utilizing TACIT</span>
+    </a>
+      <ul>
+          <li>Position: Co-first author</li>
+          <li>Contributions: Data collection, implemented the algorithm and conducted benchmarking experiments           , designed the algorithm, statistical analysis, data visualization, wrote the original draft,                  critical revision of the manuscript</li>
+          <li>Key findings:
+            <ul>
+              <li>Versatile and scalable in various contexts: disease, tissue, assay, modality, and species.</li>
+              <li>Superior accuracy and scalability compared to existing unsupervised cell type annotation methods.</li>
+              <li>Enhanced cell type annotation for spatial transcriptomics data via label transfer from single-cell RNA-seq.</li>
+              <li>Revealed new cellular associations in inflammatory salivary gland diseases, demonstrating its utility for deep phenotyping and clinical applications.</li>
+              <li>Consistent cell typing results across spatial transcriptomics and proteomics, supporting joint multiomics approaches.</li>
+              <li>Essential for advancing spatial biology towards translational and clinical research, necessitating multimodal panel designs and flexible analysis pipelines.</li>
+              <li>Aligned matching cells ID between spatial protein and spatial transcriptomics, facilitating integrated multiomic analyses.</li>
+  </ul>
+            </ul>
+          </li>
+      </ul>
+      <em>Under submission: Nature Biotechnology</em>
+      <br>
+      <a href="https://www.biorxiv.org/content/10.1101/2024.05.31.596861.abstract">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+            
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category1" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.researchsquare.com/article/rs-3601404/v1">
+        <span class="papertitle">GZMK+CD8+ T cells Target a Specific Acinar Cell Type in Sjögren’s Disease</span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+            <ul>
+              <li>Comprehensive Cellular Mapping: Through the use of unbiased single-cell and spatial transcriptomics, a comprehensive understanding of the cellular landscape of healthy salivary glands was developed, along with how this landscape changes in patients with Sjögren's Disease.
+</li>
+              <li>Identification of Novel Cell Types: The study identified novel seromucous acinar cell types, including a specific population of PRR4+CST3+WFDC2- seromucous acinar cells that are targeted in SjD, suggesting potential biomarkers or therapeutic targets.</li>
+              <li>Cytotoxic T Cells in SjD: Notably, the research highlighted the presence of GZMK+CD8 T cells that are enriched in SjD, exhibit a cytotoxic phenotype, and are physically associated with immune-engaged epithelial cells, indicating a direct role in the disease pathology.</li>
+              <li>Impact on Acinar Cells and Disease Pathology: The findings elucidate the immune response’s impact on transitioning acinar cells with high secretion levels and explain the loss of these cells in Sjögren's Disease, offering insights into the complex interplay of various cell types in the salivary glands and their contributions to the disease’s pathology.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+       <em>Under submission: Nature Medicine</em>
+      <br>
+      <a href="https://www.researchsquare.com/article/rs-3601404/v1">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category2" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://elifesciences.org/reviewed-preprints/89083v1">
+        <span class="papertitle">Multimodal analysis of methylomics and fragmentomics in plasma cell-free DNA for multi-cancer early detection and localization
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Implemented the machine learning algorithm, statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+            <ul>
+              <li>Development of SPOT-MAS Assay: We developed the SPOT-MAS (Screening for the Presence Of Tumor by Methylation And Size) assay, which uses targeted and shallow genome-wide sequencing (∼0.55X) to profile methylomics, fragmentomics, copy number, and end motifs in cell-free DNA in a single workflow.
+</li>
+              <li>Application and Test Performance: The assay was applied to 738 nonmetastatic cancer patients and 1,550 healthy controls, demonstrating a sensitivity of 72.4% at 97.0% specificity for detecting five types of cancer, including breast, colorectal, gastric, lung, and liver cancers. Sensitivity was higher in later stages, reaching 88.3% for stage IIIA cancers. </li>
+              <li>Machine Learning Integration: Machine learning techniques were employed to extract multiple cancer and tissue-specific signatures, enhancing the assay's capability to detect and accurately determine the tumor origin, achieving an accuracy of 0.7.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>eLife (impact factor: 8.7 | updated in 2023)</em>
+      <br>
+      <a href="https://elifesciences.org/reviewed-preprints/89083v1">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+      
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category2" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.futuremedicine.com/doi/10.2217/fon-2022-1041?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">
+        <span class="papertitle">Multimodal analysis of ctDNA methylation and fragmentomic profiles enhances detection of nonmetastatic colorectal cancer
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-first author</li>
+          <li>Contributions: Implemented the machine learning algorithm and conducted benchmarking experiments           , statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+            <ul>
+    <li>Developed the SPOT-MAS assay for early CRC detection, integrating DNA methylation and fragment size analysis in a single test.</li>
+    <li>Utilized plasma cell-free DNA from 159 CRC patients and 158 healthy controls, analyzed with a deep neural network to differentiate between cases and controls.</li>
+    <li>Achieved a high diagnostic performance with an area under the curve (AUC) of 0.989, sensitivity of 96.8%, and specificity of 97% in detecting CRC.</li>
+    <li>External validation confirmed robust performance with an AUC of 0.96, underscoring the assay’s potential for clinical application in early cancer detection.</li>
+          </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Future Oncology (impact factor: 3.3 | updated in 2023)</em>
+      <br>
+      <a href="https://www.futuremedicine.com/doi/10.2217/fon-2022-1041?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+            
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category2" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://bmccancer.biomedcentral.com/articles/10.1186/s12885-023-10681-0">
+        <span class="papertitle">Fragment length profiles of cancer mutations enhance detection of circulating tumor DNA in patients with early-stage hepatocellular carcinoma
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Developed a classification model based on cancer-related mutations and ctDNA fragment length profiles, employing deep sequencing of thirteen HCC-associated genes.</li>
+    <li>Achieved a diagnostic performance with an area under the curve (AUC) of 0.88, sensitivity of 89%, and specificity of 82% in the initial discovery cohort of 55 persons with HCC and 55 healthy participants.</li>
+    <li>Validation in an independent cohort maintained robust performance, achieving an AUC of 0.86 with sensitivity and specificity of 81%.</li>
+    <li>Provides a strong rationale for further clinical evaluation in a larger-scale prospective study to confirm the assay's effectiveness for early HCC detection.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>BMC Cancer (impact factor: 3.8 | updated in 2023)</em>
+      <br>
+      <a href="https://bmccancer.biomedcentral.com/articles/10.1186/s12885-023-10681-0">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>               
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category2" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2023.1127086/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Oncology&id=1127086">
+        <span class="papertitle">Multimodal analysis of genome-wide methylation, copy number aberrations, and end motif signatures enhances detection of early-stage breast cancer
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Implemented the machine learning algorithm, statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Utilized a multimodal approach, SPOT-MAS, to analyze methylation changes, copy number alterations (CNA), and 4-nucleotide oligomer end motifs (EM) in cell-free DNA (cfDNA) from 239 nonmetastatic breast cancer patients and 278 healthy subjects.</li>
+    <li>Identified distinct profiles of genome-wide methylation changes, copy number alterations, and end motifs in cfDNA, which are significant for breast cancer detection.</li>
+    <li>Developed a multi-featured machine learning model integrating all three signatures (methylation, CNA, and EM), which significantly outperformed models based on individual features.</li>
+    <li>Achieved an area under the curve (AUC) of 0.91 with a sensitivity of 65% at 96% specificity, demonstrating enhanced accuracy for detecting early-stage breast cancer.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Frontier in Oncology (impact factor: 4.7 | updated in 2023)</em>
+      <br>
+      <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2023.1127086/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Oncology&id=1127086">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category2" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.biorxiv.org/content/10.1101/2023.12.24.573277v1.abstract">
+        <span class="papertitle">Tissue of origin detection for cancer tumor using low-depth cfDNA samples through combination of tumor-specific methylation atlas and genome-wide methylation density in graph convolutional neural networks
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Developed a tumor-specific methylation atlas (TSMA) using whole-genome bisulfite sequencing data from five types of tumor tissues (breast, colorectal, gastric, liver, and lung cancers) and paired white blood cells (WBC).</li>
+    <li>Implemented a non-negative least square matrix factorization (NNLS) deconvolution algorithm with TSMA to identify tumor tissue types in WGBS samples, though it faced challenges with cfDNA samples due to high WBC-derived DNA.</li>
+    <li>Enhanced tissue-of-origin (TOO) detection model by integrating deconvolution scores from TSMA with other cfDNA features, using a multi-modal strategy.</li>
+    <li>Achieved an accuracy of 69% in determining TOO in a validation dataset of 239 low-depth cfDNA samples, utilizing a graph convolutional neural network that combines methylation density features with deconvolution scores.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Under revision Journal of Oncology</em>
+      <br>
+      <a href="https://www.biorxiv.org/content/10.1101/2023.12.24.573277v1.abstract">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+ 
+
+
+
+
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category3" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280144">
+        <span class="papertitle">Anxiety and its risk factors among non-Japanese residents living in Japan undergoing COVID-19 situation: A cross-sectional survey
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Conducted a web-based survey in 13 languages to assess anxiety levels among non-Japanese residents in Japan during the COVID-19 pandemic, using the State-Trait Anxiety Inventory.</li>
+    <li>Analyzed 357 valid responses from January to March 2021, finding that 54.6% of participants suffered from clinically significant anxiety (CSA).</li>
+    <li>Identified three significant risk factors associated with higher levels of anxiety: troubles or difficulties in learning or working, decreased sleep duration, and deteriorating overall physical health.</li>
+    <li>The study underscores the impact of COVID-19 on mental health among foreign communities in Japan, suggesting targeted support for these identified risk factors to mitigate anxiety.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Plos one (impact factor: 3.7 | updated in 2023) </em>
+      <br>
+      <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280144">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category3" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.medrxiv.org/content/10.1101/2023.12.22.23300420v4">
+        <span class="papertitle">Analytical and clinical validation of a circulating tumor DNA-based assay for multi-cancer early detection
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Conducted comprehensive analytical validation of the SPOT-MAS test on a retrospective cohort of 751 participants (290 healthy and 461 with confirmed cancer) to determine detection limits, repeatability, reproducibility, and resistance to potential interferents like hemoglobin and genomic DNA contamination.</li>
+    <li>In analytical tests, SPOT-MAS detected 50% of cancer cases at a tumor fraction of 0.049 with 98% specificity, demonstrating consistent results across intra- and inter-batch analyses.</li>
+    <li>Launched a large-scale multi-center prospective trial (K-DETEK) involving 9,057 asymptomatic participants in Vietnam, where the test achieved a positive predictive value of 58.14%, accuracy of 84.00% in tumor location prediction, a negative predictive value of 99.92%, overall sensitivity of 78.13%, and specificity of 99.80%.</li>
+    <li>This study marks the first extensive prospective validation of an MCED test in Asia, highlighting SPOT-MAS’s potential for early cancer detection in settings with limited resources and no existing nationwide cancer screening programs.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Under revision Journal of Oncology </em>
+      <br>
+      <a href="https://www.medrxiv.org/content/10.1101/2023.12.22.23300420v4">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+
+
+
+
+
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category3" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://journals.lww.com/md-journal/fulltext/2023/11100/prevalence_and_impact_of_metabolic_syndrome_on.1.aspx?context=latestarticles">
+        <span class="papertitle">Prevalence and impact of metabolic syndrome on in-hospital outcomes in patients with acute myocardial infarction: A perspective from a developing country
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+ <ul>
+    <li>Analyzed 199 patients with AMI who underwent primary percutaneous coronary intervention, finding that 68.3% (136 patients) had MetS.</li>
+    <li>Patients with MetS were more likely to be female and had higher body mass indices, larger waist circumferences, and a higher prevalence of hypertension and diabetes compared to those without MetS.</li>
+    <li>Major in-hospital complications such as cardiogenic shock, heart failure, mechanical complications, and arrhythmias showed no significant difference between patients with and without MetS.</li>
+    <li>While MetS was not associated with increased all-cause in-hospital mortality (OR 4.92, 95% CI 0.62-39.31, P = .13), it was significantly associated with higher cardiovascular mortality, highlighting increased waist circumference as a critical factor for increased all-cause mortality.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Medicine (impact factor: 1.55 | updated in 2023) </em>
+      <br>
+      <a href="https://journals.lww.com/md-journal/fulltext/2023/11100/prevalence_and_impact_of_metabolic_syndrome_on.1.aspx?context=latestarticles">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category3" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.cambridge.org/core/journals/antimicrobial-stewardship-and-healthcare-epidemiology/article/comparison-of-severity-of-illness-between-the-sarscov2-omicron-variant-and-delta-variant/B6C40189EF59B658E02416707636C7AC">
+        <span class="papertitle">A comparison of severity of illness between the SARS-CoV-2 Omicron variant and Delta variant
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+  <ul>
+    <li>Conducted a retrospective cohort study at a safety-net hospital in Virginia, comparing disease severity between 500 Delta and 500 Omicron variant-infected adults using electronic medical record data.</li>
+    <li>Identified 279 propensity score-matched pairs from the cohort, primarily consisting of unvaccinated individuals with medical comorbidities who self-identified as Black.</li>
+    <li>Found that individuals infected with the Delta variant exhibited more severe disease compared to those infected with the Omicron variant, independent of vaccination status.</li>
+    <li>Highlighted that patients with kidney, liver, respiratory diseases, and cancer are at higher risk for severe COVID-19, while those with 2 doses of COVID-19 vaccine tended to have less severe disease.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>Antimicrobial Stewardship & Healthcare Epidemiology (impact factor: 0.4 | updated in 2023) </em>
+      <br>
+      <a href="https://www.cambridge.org/core/journals/antimicrobial-stewardship-and-healthcare-epidemiology/article/comparison-of-severity-of-illness-between-the-sarscov2-omicron-variant-and-delta-variant/B6C40189EF59B658E02416707636C7AC">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+  <tr class="research-paper category3" onmouseout="portrait_stop()" onmouseover="portrait_start()">
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      <a href="https://www.thelancet.com/journals/lansea/article/PIIS2772-3682(22)00036-1/fulltext">
+        <span class="papertitle">The global response: How cities and provinces around the globe tackled covid-19 outbreaks in 2021
+        </span>
+      </a>
+      <ul>
+          <li>Position: Co-author</li>
+          <li>Contributions: Statistical analysis, data visualization, critical revision of the manuscript</l>
+          <li>Key findings:
+ <ul>
+    <li>Analyzed 199 patients with AMI who underwent primary percutaneous coronary intervention, finding that 68.3% (136 patients) had MetS.</li>
+    <li>Patients with MetS were more likely to be female and had higher body mass indices, larger waist circumferences, and a higher prevalence of hypertension and diabetes compared to those without MetS.</li>
+    <li>Major in-hospital complications such as cardiogenic shock, heart failure, mechanical complications, and arrhythmias showed no significant difference between patients with and without MetS.</li>
+    <li>While MetS was not associated with increased all-cause in-hospital mortality (OR 4.92, 95% CI 0.62-39.31, P = .13), it was significantly associated with higher cardiovascular mortality, highlighting increased waist circumference as a critical factor for increased all-cause mortality.</li>
+  </ul>
+            </ul>
+          </li>
+
+      </ul>
+      <em>The Lancet Regional Health-Southeast Asia (impact factor: 2.2 | updated in 2023) </em>
+      <br>
+      <a href="https://www.thelancet.com/journals/lansea/article/PIIS2772-3682(22)00036-1/fulltext">arxiv</a>
+      <p></p>
+    </td>
+  </tr>
+</tbody>
+</table>   
+
+
+ 
+ 
+<table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
+  <tbody>
+    <!-- Awards and Recognitions section -->
+    <tr>
+      <td style="padding:20px;width:100%;vertical-align:middle">
+        <h2>Awards and Recognitions</h2>
+        <ul>
+          <li>Jacob B. and Veronica Schmitt Scholarship - 2017, 2018, 2019</li>
+          <li>Harry S. Kieval Mathematics - 2017, 2018, 2019</li>
+          <li>Undergraduate Research Award - 2018, 2020</li>
+          <!-- Add more list items as needed -->
+        </ul>
+      </td>
+    </tr>
+    <!-- Special thanks section -->
+    <tr>
+      <td style="padding:10px;width:100%;vertical-align:top;text-align:right;">
+        <div style="margin-top: 10px;">
+          <p>Special thanks to <a href="https://jonbarron.info">Jon Barron</a> for providing the HTML code that enhanced this page.</p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Including external scripts like ClustrMaps -->
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=DrJTaFbm4oJSg02htZeDzr4XTASykU8YSzQOik8N7o4&cl=ffffff&w=a"></script>
+
     
   </body>
+  
+  
 </html>
